@@ -17,7 +17,7 @@ export default function Auth(props) {
 
   function handleCheck() {
     setShowPass(!showPass);
-    console.log();
+
   }
  const Handlelogin=async (e) => {
     e.preventDefault();
