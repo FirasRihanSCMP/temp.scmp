@@ -27,7 +27,7 @@ import { StaticRouter } from "react-router-dom/server"; */
 const upload = multer({ dest: '../client/build/imgs/events' })
 const app = express();
 const db = mysql.createPool({
-  host: "scmp-lb.com",
+  host: "207.180.243.8",
   user: "sc34mpr_adminSCMP",
   password: "db@SqlSCMP2021",
   database: "sc34mpr_SCMP",
@@ -195,7 +195,7 @@ app.post("/api/Login", async (req, res) => {
 
             } else {
 
-              res.send({ webmail: true, result: "http://scmp-lb.com/webmail" });
+              res.send({ webmail: true, result: "http://207.180.243.8/webmail" });
             }
 
 
