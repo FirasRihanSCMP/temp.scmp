@@ -24,7 +24,7 @@ import { StaticRouter } from "react-router-dom/server"; */
 /* import cookieParser from 'cookie-parser' */
 /* import index from '../client/public/index' */
 /* import multer from "multer"; */
-const upload = multer({ dest: '../build/imgs/events' })
+const upload = multer({ dest: '../client/build/imgs/events' })
 const app = express();
 const db = mysql.createPool({
   host: "scmp-lb.com",
@@ -35,7 +35,7 @@ const db = mysql.createPool({
 });
 const storage = multer.diskStorage({
   destination: (req, files, cb) => {
-    cb(null, '../build/imgs/events')
+    cb(null, '../client/build/imgs/events')
   },
   filename: (req, files, cb) => {
 
