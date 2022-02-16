@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import stylesadmin from "./admin.module.css";
 import { Row, Col } from "react-bootstrap";
 import axios from "axios";
@@ -16,7 +16,17 @@ import { useLocation } from "react-router-dom";
 export default function Admin() {
   const {state} = useLocation();
 const [loggedIn, setloggedIn] = useState(false);
+/* 
+useEffect(()=>{
+  const checkLogged =async()=>{
+    const valid=await logIn()
+    console.log(valid)
+    setloggedIn(valid)
+  }
+checkLogged()
 
+  }
+,[]) */
  const fileUploadHandler = ()=>{
      axios.post('')
  }

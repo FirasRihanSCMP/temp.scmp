@@ -8,6 +8,7 @@ const cors = require('cors')
 const mysql = require('mysql')
 const cookieParser = require('cookie-parser')
 const multer = require('multer')
+const {createToken,validateToken}=require('./JWT')
 /* import express from "express";
 import mysql from "mysql";
 import bcrypt from "bcryptjs";
@@ -53,10 +54,21 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 
+/* app.use(session({
 
+  secret: "tanjarame2leyesakhane2022",
+
+  resave: false,
+  saveUninitialized: false,
+  
+})) */
 
 
 app.use(express.static(path.resolve(__dirname, '../client', 'build')))
+
+/* app.get("api/login",validateToken, async (req, res) => {
+
+}) */
 
 app.get("/api/Events", async (req, res) => {
   try {
@@ -159,14 +171,14 @@ app.post("/api/EventUpload", multipleUpload, async (req, res, err) => {
 app.post("/api/Login", async (req, res) => {
   try {
 
-    const { username, password } = req.body;
-
+    const { data} = req.body;
+    const { username, password }=data
 
     const U_NameModified = username.toLowerCase().replace(/[&\/\\#,+()$~%'":*?<>{}]/g, "");
     const sqlFetch = "SELECT * FROM `users` WHERE `U_Name`=(?)";
     await db.query(sqlFetch, [U_NameModified], async (err, result) => {
       if (err) {
-        console.log("hello")
+       
         res.send({ result: "Network Error" }).status(501)
       }
       else if (result.length > 0) {
@@ -177,7 +189,8 @@ app.post("/api/Login", async (req, res) => {
           if (validPass) {
           
             if (!!result[0].admin) {
-          
+             /*  const accessToken=createToken(result[0])
+              res.cookie("access-token",accessToken,{maxAge:60*60*2*1000}) */
               res.send({ webmail: false, result: true }).status(201)
 
             } else {

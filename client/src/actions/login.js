@@ -5,9 +5,9 @@ export const login=async (e)=>{
  
   /*   const data = { email, password }; */
   await  axios
-    .post("http://188.166.60.231:3002/api/Login", data)
+    .post("http://188.166.60.231:3002/api/Login", data, { withCredentials: true })
+   /*   192.168.0.140 for testing */
     .then(await function (response)  {
-      console.log(response)
       if(response.data.webmail===true){
         window.location.href=response.data.result
        return result=false;
