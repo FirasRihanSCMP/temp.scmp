@@ -13,7 +13,7 @@ export default function Events(props) {
   const [Loaded, setLoaded] = useState(false);
  /*  const [startDate, setStartDate]=useState(new Date()); */
   useEffect(() => {
-  Axios.get("http://localhost/api/Events").then((response)=>{
+  Axios.get("http://188.166.60.231:3002/api/Events").then((response)=>{
     setLoaded(true)
     setEventsList(response.data);
   
