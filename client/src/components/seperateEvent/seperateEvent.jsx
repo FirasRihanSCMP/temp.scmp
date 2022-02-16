@@ -18,7 +18,7 @@ export default function SeperateEvent(props) {
    useEffect(() => {
     async function fetchData(){
     await axios
-      .post("http://localhost:3002/api/SeperateEvent", { EID: id })
+      .post("http://localhost/api/SeperateEvent", { EID: id })
       .then((response) => {
   
     if(response.data==="not found"){

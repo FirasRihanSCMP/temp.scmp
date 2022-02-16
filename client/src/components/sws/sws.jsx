@@ -18,7 +18,7 @@ export default function Sws() {
   useEffect(() => {
     async function fetchData() {
       await axios
-        .get("http://localhost:3002/api/SWS")
+        .get("http://localhost/api/SWS")
         .then((response) => {
 
           if (response.data === "not found") {
