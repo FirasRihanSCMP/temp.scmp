@@ -76,6 +76,7 @@ app.get("/api/SWS", async (req, res) => {
 console.log('hello')
     const sqlFetch = "SELECT * FROM `sws2022-carousel` ORDER BY 'id'";
     await db.query(sqlFetch, async (err, result) => {
+      console.log(result)
       return res.send(result);
     });
   } catch (error) {
