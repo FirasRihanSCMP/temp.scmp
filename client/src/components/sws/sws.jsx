@@ -71,7 +71,7 @@ export default function Sws() {
         <li>Technical</li>
         <li>Legal</li>
         <li>Logistical</li>
-        </ul> Assistance to launch new Startups. <br /> <br />
+        </ul>  <br/> Assistance to launch new Startups. <br /> <br />
         Another objective of this Weekend is benefiting from technology to stimulate innovation, to market ideas, and to promote cooperation between different stake holders. {/* responsible for the success of the proposals. */}
         The competitive participation is open to ideas with technological background in the following fields:
        <br/>
