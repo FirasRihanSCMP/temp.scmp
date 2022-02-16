@@ -166,6 +166,7 @@ app.post("/api/Login", async (req, res) => {
     const sqlFetch = "SELECT * FROM `users` WHERE `U_Name`=(?)";
     await db.query(sqlFetch, [U_NameModified], async (err, result) => {
       if (err) {
+        console.log("hello")
         res.send({ result: "Network Error" }).status(501)
       }
       else if (result.length > 0) {
