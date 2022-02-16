@@ -171,8 +171,8 @@ app.post("/api/EventUpload", multipleUpload, async (req, res, err) => {
 app.post("/api/Login", async (req, res) => {
   try {
 
-    const { data} = req.body;
-    const { username, password }=data
+   /*  const  data = req.body;*/
+    const { username, password }=req.body 
 
     const U_NameModified = username.toLowerCase().replace(/[&\/\\#,+()$~%'":*?<>{}]/g, "");
     const sqlFetch = "SELECT * FROM `users` WHERE `U_Name`=(?)";
