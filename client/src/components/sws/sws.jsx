@@ -32,7 +32,7 @@ export default function Sws() {
           }
         })
         .catch(err => {
-
+          console.log(err)
           seterrorFetchedChecker((c) => !c);
         });
     }
