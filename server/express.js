@@ -44,7 +44,8 @@ const storage = multer.diskStorage({
 })
 app.use(cors({
   credentials: true,
-  origin: '*',
+  origin: ['http://localhost:3000','http://test.scmp-lb.com:3000','http://test.scmp-lb.com:3002','http://188.166.60.231:3002','http://188.166.60.231:3000','http://localhost:3002','http://localhost']
+  ,
 }));
 
 app.use(cookieParser());
