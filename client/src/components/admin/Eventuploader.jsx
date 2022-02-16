@@ -53,7 +53,7 @@ data.append('brief',brief)
 data.append('paragraph',paragraph)
 data.append('date',date)
 
-if (window.confirm("Press a button!")) {await axios.post("//localhost:3001/api/EventUpload", data)
+if (window.confirm("Press a button!")) {await axios.post("//localhost:3002/api/EventUpload", data)
       .then((e) => {
      
          toast.success("Upload success");
