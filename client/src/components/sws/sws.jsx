@@ -64,6 +64,8 @@ export default function Sws() {
       <br/><br/>
        
         In the final stage, SCMP will provide the accepted proposals with the necessary:
+        <br/>
+       <br/>
         <ul className={styleSws.list}>
         <li>Financial</li>
         <li>Technical</li>
