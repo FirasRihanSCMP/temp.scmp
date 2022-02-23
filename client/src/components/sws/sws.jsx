@@ -53,7 +53,7 @@ export default function Sws() {
 
     <div className={styleSws.root}>
       {/* {Loaded? */}
-      <p className={styleSws.Application}> To Apply for this Event, Please Fill the Following  <a href="https://forms.gle/6cabDREDmKrLm4hm7" className={styleSws.formLink} >Application</a> before midnight of 6-March-2022</p>
+      <p className={styleSws.Application}> To Apply for this Event, Please Fill the Following  <a href="https://forms.gle/6cabDREDmKrLm4hm7" className={styleSws.formLink} >Application</a> before midnight of 6-May-2022</p>
       <br/>
       <h1 className={styleSws.title}>Why SCMP's Startup Weekend?</h1>
       <p className={styleSws.firstParagraph}>The “Startup Weekend” aims to attract creative ideas and innovations of young people in order to achieve their ambitions and goals.
