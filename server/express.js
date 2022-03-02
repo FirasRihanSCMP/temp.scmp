@@ -94,6 +94,18 @@ app.get("/api/SWS", async (req, res) => {
     return res.send("not found");
   }
 });
+app.get("/api/home", async (req, res) => {
+  try {
+/* console.log('hello') */
+    const sqlFetch = "SELECT * FROM `home-carousel` ORDER BY 'id'";
+    await db.query(sqlFetch, async (err, result) => {
+      /* console.log(result) */
+      return res.send(result);
+    });
+  } catch (error) {
+    return res.send("not found");
+  }
+});
 
 app.post("/api/AddU_SCMP", async (req, res) => {
   try {

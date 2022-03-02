@@ -47,7 +47,7 @@ export default function Sws() {
 
   return <div> {Loaded ? <div>  
   
-    <div className={styleSws.swsCarousel}><CarouselScmp style={36} img={Imgs}/></div>
+    <div className={styleSws.swsCarousel}><CarouselScmp style={20} img={Imgs}/></div>
     <h2 className={styleSws.header}>The Scientific Center for Manufacturing and Production announces the organization of its first Startup Weekend Support! <br/> SCMP-SWS2022</h2>
 
 
