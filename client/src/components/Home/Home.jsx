@@ -14,7 +14,7 @@ const [errorFetchedChecker, seterrorFetchedChecker] = useState(false)
     useEffect(() => {
         async function fetchData() {
           await axios
-            .get("https://188.166.60.231:3002/api/home")
+            .get("//188.166.60.231:3002/api/home")
             .then((response) => {
     
               if (response.data === "not found") {
