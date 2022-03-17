@@ -5,7 +5,7 @@ export const login=async (e)=>{
  
   /*   const data = { email, password }; */
   await  axios
-    .post("http://64.227.166.42:3002/api/Login", data)
+    .post("https://64.227.166.42/api/Login", data)
    /*   192.168.0.140 for testing */
     .then(await function (response)  {
       if(response.data.webmail===true){
